@@ -357,7 +357,7 @@ pub struct jpeg_compress_struct {
     pub quant_tbl_ptrs: [*mut JQUANT_TBL; 4usize],
 
     #[cfg(feature = "jpeg70_abi")]
-    q_scale_factor: [c_int; NUM_QUANT_TBLS],
+    pub q_scale_factor: [c_int; NUM_QUANT_TBLS],
 
     /// ptrs to coefficient quantization tables, or NULL if not defined,
     /// and corresponding scale factors (percentage, initialized 100).
